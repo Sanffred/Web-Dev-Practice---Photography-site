@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+}
+
+.main_box {
+  width: 100vw;
+  height: 100vh;
+
+  background: url(photo.jpg);
+  background-size: cover;
+}
+
+.main_box #check {
+  display: none;
+}
+
+/* when it was .main_box .btn_one it did not apply the cursor:pointer maybe coz i was hovering over the label tag which is inside div tag */
+
+.main_box .btn_one label i {
+  cursor: pointer;
+
+  font-size: 40px;
+  /* font-weight: 100;  font weight default of this icon is 900 */
+
+  position: relative;
+  left: 15px;
+  top: 15px;
+
+  transition: all 0.25s linear;
+}
+
+.sidebar_menu {
+  background-color: rgb(255, 255, 255, 0.1);
+  width: 25vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 5px white;
+
+  position: fixed;
+  left: -500px;
+
+  transition: all 0.25s linear;
+}
+
+.sidebar_menu .logo a {
+  /* The display: inline property prevents width from having an effect.
+Try setting display to something other than inline */
+  /* width: 100%; */
+  text-align: center;
+  display: block;
+  padding: 25px 0;
+  margin-right: 55px;
+  font-size: 35px;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar_menu .btn_two label i {
+  cursor: pointer;
+
+  font-size: 40px;
+  position: absolute;
+  top: 32px;
+  left: 320px;
+  transition: all 0.25s linear;
+}
+
+.menu i,
+a {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.menu li {
+  padding: 22px 10px;
+  cursor: pointer;
+
+  /* to remove the bullete points from the li tags */
+  list-style-type: none;
+}
+
+.social_media a {
+  font-size: 30px;
+  opacity: 0.25;
+  padding: 0 15px;
+  position: relative;
+  top: 30px;
+  /* left: 10px; */
+  transition: all 0.3s linear;
+}
+
+.sidebar_menu .logo:hover {
+  box-shadow: 0 0 5px white;
+}
+
+.sidebar_menu .menu ul :hover {
+  box-shadow: 0 0 5px white;
+}
+
+.main_box .btn_one i:hover {
+  font-size: 45px;
+}
+
+.main_box .sidebar_menu .btn_two i:hover {
+  font-size: 45px;
+}
+
+.main_box .social_media a:hover {
+  opacity: 1;
+}
+
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+
+#check:checked ~ .btn_one {
+  opacity: 0;
+}
+
+/* ~ selector is a sibling selector ..do Mdn to understand more  */
